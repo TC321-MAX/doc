@@ -4,6 +4,10 @@ import starlight from '@astrojs/starlight';
 import starlightThemeNova from 'starlight-theme-nova';
 import starlightNextjsTheme from 'starlight-nextjs-theme'
 import starlightGiscus from 'starlight-giscus'
+import starlightCoolerCredit from 'starlight-cooler-credit'
+import liveCode from 'astro-live-code'
+
+import vue from '@astrojs/vue';
 
 // https://astro.build/config
 export default defineConfig({
@@ -30,7 +34,7 @@ export default defineConfig({
 			locales: {
 				root: {
 					label: '简体中文',
-					lang: 'zh-cn'
+					lang: 'zh-CN'
 				}
 			},
 			sidebar: [
@@ -47,9 +51,20 @@ export default defineConfig({
 					autogenerate: { directory: '开发人员规范' },
 				},
 			],
+			customCss: [
+				// 你的自定义 CSS 文件的相对路径
+				'./src/styles/custom.css',
+			],
 			plugins: [
 				// starlightThemeNova(),
-				starlightNextjsTheme(),
+				starlightNextjsTheme(), // 主题
+				starlightCoolerCredit({
+					credit: {
+						title: 'Built with Astro',
+						href: 'https://tc321-max.github.io',
+						description: 'TC321-MAX 是一个基于 Next.js 的文档平台，由 TC321-MAX 团队开发。'
+					}
+				}), // 自定义版权信息
 				starlightGiscus({
 					repo: 'TC321-MAX/doc',
 					repoId: 'R_kgDOPI_igw',
@@ -60,5 +75,11 @@ export default defineConfig({
 				})
 			],
 		}),
+		vue(),
+		liveCode({
+			defaultProps: {
+				'client:load': true
+			},
+		})
 	],
 });
