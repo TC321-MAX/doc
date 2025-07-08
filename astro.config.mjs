@@ -7,6 +7,8 @@ import starlightGiscus from 'starlight-giscus'
 
 // https://astro.build/config
 export default defineConfig({
+	site: 'https://tc321-max.github.io',
+	base: 'doc',
 	integrations: [
 		starlight({
 			title: 'My Docs',
@@ -15,10 +17,10 @@ export default defineConfig({
 			editLink: {
 				baseUrl: 'https://github.com/TC321-MAX/doc/tree/main/'
 			},
-			locales:{
-				root:{
+			locales: {
+				root: {
 					label: '简体中文',
-					lang:'zh-cn'
+					lang: 'zh-cn'
 				}
 			},
 			sidebar: [
