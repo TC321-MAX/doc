@@ -43,7 +43,7 @@ export default defineConfig({
 					category: 'Announcements',
 					categoryId: 'DIC_kwDOPI_ig84Cspar'
 				})
-			]
+			],
 		}),
 	],
 });
