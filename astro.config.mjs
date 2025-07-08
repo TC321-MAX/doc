@@ -12,10 +12,20 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'My Docs',
-			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
+			social: [
+				{ icon: 'codeberg', label: 'Codeberg', href: 'https://codeberg.org/knut' },
+				{ icon: 'discord', label: 'Discord', href: 'https://astro.build/chat' },
+				{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro' },
+				{ icon: 'gitlab', label: 'GitLab', href: 'https://gitlab.com/delucis' },
+				{ icon: 'mastodon', label: 'Mastodon', href: 'https://m.webtoo.ls/@astro' },
+			],
 			lastUpdated: true,
 			editLink: {
 				baseUrl: 'https://github.com/TC321-MAX/doc/tree/main/'
+			},
+			markdown: {
+				// 禁用 Starlight 的可点击标题锚点链接。
+				headingLinks: false,
 			},
 			locales: {
 				root: {
@@ -25,15 +35,16 @@ export default defineConfig({
 			},
 			sidebar: [
 				{
-					label: 'Guides',
-					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', slug: 'guides/example' },
-					],
+					label: '总则',
+					autogenerate: { directory: '总则' },
 				},
 				{
-					label: 'Reference',
-					autogenerate: { directory: 'reference' },
+					label: 'OA系统的使用',
+					autogenerate: { directory: 'OA系统的使用' },
+				},
+				{
+					label: '开发人员规范',
+					autogenerate: { directory: '开发人员规范' },
 				},
 			],
 			plugins: [
@@ -43,7 +54,9 @@ export default defineConfig({
 					repo: 'TC321-MAX/doc',
 					repoId: 'R_kgDOPI_igw',
 					category: 'Announcements',
-					categoryId: 'DIC_kwDOPI_ig84Cspar'
+					categoryId: 'DIC_kwDOPI_ig84Cspar',
+					inputPosition: 'top',
+					lazy: true
 				})
 			],
 		}),
