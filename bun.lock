@@ -7,6 +7,7 @@
         "@astrojs/starlight": "^0.34.4",
         "astro": "^5.6.1",
         "sharp": "^0.34.2",
+        "starlight-giscus": "^0.6.1",
         "starlight-nextjs-theme": "^0.2.0",
         "starlight-theme-nova": "^0.9.0",
       },
@@ -844,6 +845,8 @@
     "source-map-js": ["source-map-js@1.2.1", "", {}, "sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA=="],
 
     "space-separated-tokens": ["space-separated-tokens@2.0.2", "", {}, "sha512-PEGlAwrG8yXGXRjW32fGbg66JAlOAwbObuqVoJpv/mRgoWDQfgH1wDPvtzWyUSNAXBGSk8h755YDbbcEy3SH2Q=="],
+
+    "starlight-giscus": ["starlight-giscus@0.6.1", "", { "peerDependencies": { "@astrojs/starlight": ">=0.32.0" } }, "sha512-5vwNb06slZW+UwVBrva3gARYoIegr2t5sowfmQ7x5+W1eFv4VlHmIy/XJO7tvdizWlShiRGsgRcQORqrkcemLg=="],
 
     "starlight-nextjs-theme": ["starlight-nextjs-theme@0.2.0", "", { "peerDependencies": { "@astrojs/starlight": ">=0.34" } }, "sha512-JM6bTGhIKSDEXp58ALuphUKQMX/2PYPNAaACxVAPoEJnLd8rx/biRsvvcHb7djsrJI9E7j3KSdNacXuyRrTLww=="],
 
